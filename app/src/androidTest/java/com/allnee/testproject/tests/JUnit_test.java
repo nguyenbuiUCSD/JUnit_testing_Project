@@ -3,6 +3,7 @@ package com.allnee.testproject.tests;
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.TextView;
 import android.widget.EditText;
+import android.widget.Button;
 
 import com.allnee.testproject.MainActivity;
 import com.allnee.testproject.R;
@@ -20,17 +21,19 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>{
     public void test_first(){
         mainActivity = getActivity();
 
+        final Button  addButton = (Button) mainActivity.findViewById(R.id.button);
         final EditText editText=(EditText) mainActivity.findViewById(R.id.editText3);
         final EditText firstNumber = (EditText) mainActivity.findViewById(R.id.editText);
         final EditText secondNumber = (EditText) mainActivity.findViewById(R.id.editText2);
         final EditText result     = (EditText) mainActivity.findViewById(R.id.editText3);
 
-        String num1 = firstNumber.getText().toString();
-        String num2 = secondNumber.getText().toString();
+        firstNumber.setText("100");
+        secondNumber.setText("200");
+
+        addButton.performClick();
 
         String tester = editText.getText().toString();
-        assertEquals(String.valueOf(Integer.parseInt(num1)+
-                Integer.parseInt(num2)), tester);
+        assertEquals("300", tester);
     }
 
 
