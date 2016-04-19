@@ -10,8 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.allnee.testproject.MainActivity"
-    tools:showIn="@layout/activity_main"
-    android:onClick="add">
+    tools:showIn="@layout/activity_main">
 
     <TextView
         android:id="@+id/tv1"
@@ -64,8 +63,7 @@
         android:layout_below="@+id/textView"
         android:layout_toLeftOf="@+id/editText2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="add" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"

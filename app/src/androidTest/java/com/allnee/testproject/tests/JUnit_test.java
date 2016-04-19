@@ -20,9 +20,17 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>{
     public void test_first(){
         mainActivity = getActivity();
 
-        TextView textView=(TextView) mainActivity.findViewById(R.id.tv1);
-        String tester = textView.getText().toString();
-        assertEquals("First number", tester);
+        final EditText editText=(EditText) mainActivity.findViewById(R.id.editText3);
+        final EditText firstNumber = (EditText) mainActivity.findViewById(R.id.editText);
+        final EditText secondNumber = (EditText) mainActivity.findViewById(R.id.editText2);
+        final EditText result     = (EditText) mainActivity.findViewById(R.id.editText3);
+
+        String num1 = firstNumber.getText().toString();
+        String num2 = secondNumber.getText().toString();
+
+        String tester = editText.getText().toString();
+        assertEquals(String.valueOf(Integer.parseInt(num1)+
+                Integer.parseInt(num2)), tester);
     }
 
 
