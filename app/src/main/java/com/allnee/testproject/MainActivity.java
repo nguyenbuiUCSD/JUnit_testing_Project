@@ -9,7 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     public static int sum(int a, int b){
-        return a-b;
+        return a+b;
     }
 
 
