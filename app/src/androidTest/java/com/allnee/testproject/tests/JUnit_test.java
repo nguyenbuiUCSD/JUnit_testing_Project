@@ -30,7 +30,7 @@ public class JUnit_test extends ActivityInstrumentationTestCase2<MainActivity>{
         firstNumber.setText("100");
         secondNumber.setText("200");
 
-        addButton.performClick();
+        addButton.callOnClick();
 
         String tester = editText.getText().toString();
         assertEquals("300", tester);
